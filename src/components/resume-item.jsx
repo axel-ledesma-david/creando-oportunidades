@@ -1,11 +1,6 @@
 import { Card, Typography } from "@material-tailwind/react";
 
-interface ResumeItemProps {
-  icon: React.ElementType;
-  children: React.ReactNode;
-}
-
-export function ResumeItem({ icon: Icon, children }: ResumeItemProps) {
+export function ResumeItem({ icon: Icon, children }) {
   return (
     <div className="flex items-start gap-4">
       <Card
