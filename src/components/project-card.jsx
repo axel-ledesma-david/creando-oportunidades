@@ -3,8 +3,7 @@ import {
   Card,
   CardHeader,
   CardBody,
-  Typography,
-  Button,
+  Typography
 } from "@material-tailwind/react";
 
 export function ProjectCard({ img, title, desc }) {
@@ -31,9 +30,6 @@ export function ProjectCard({ img, title, desc }) {
         <Typography className="mb-6 font-normal !text-gray-500">
           {desc}
         </Typography>
-       {/*  <Button color="gray" size="sm">
-          see details
-        </Button> */}
       </CardBody>
     </Card>
   );

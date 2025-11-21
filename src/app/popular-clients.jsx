@@ -1,47 +1,45 @@
 "use client";
 
 import { Typography } from "@material-tailwind/react";
+import Image from "next/image";
 
 export function PopularClients() {
+
+  const CLIENTS = [
+    {name: "aprecod", ext: "jpeg"},
+    {name: "centroSalud", ext: "png"},
+    {name: "gymGoel-removebg-preview", ext: "png"},
+    {name: "minIgualdad", ext: "jpeg"},
+    {name: "vecinalSanlo", ext: "jpeg"}
+  ]
+  /* #F3F4F6 #F1F5F9 */
+
   return (
-    <section className="px-16 py-8 lg:py-15" id="convenios">
+    <section className="px-16 py-8 lg:py-15 bg-[#F3F4F6] shadow-md" id="convenios">
       <div className="container mx-auto grid items-center place-items-center">
         <div className="text-center">
-          {/* <Typography variant="h6" className="mb-4 uppercase !text-gray-500">
-            POPULAR CLIENTS
-          </Typography> */}
           <Typography variant="h2" color="blue-gray" className="mb-4">
             Convenios
           </Typography>
         </div>
         <Typography
           variant="lead"
-          className="mx-auto w-full !text-gray-500"
+          className="mx-auto w-full text-gray-600 text-xl text-center"
         >
-          tenemos convenio con el gimnasio, GOEL, donde Leandra y guille, hacen
-          entrenar a los integrantes del grupo, para hacer frente al síndrome de
-          abstinencia, y como estructura de protección. *interactuamos con la
-          red bario san Lorenzo, con más de 30 instituciones, en el cual nos
-          ayudamos mutuamente, con los recursos humanos y materiales de cada
-          institución, ejemplo: centro de salud “padre Gasparoto”, “vecinal san
-          Lorenzo”, club san Lorenzo” estación mitre, jardines de infantes,
-          escuela técnica, escuela pascual Echague, CAF23, etc. *salimos a hacer
-          deporte (futbol) con los muchachos del programa (fotos) *los
-          familiares se juntan también para hacer algunos cursos diversos, para
-          afianzar el vinculo, como una descarga a tierra dicen ellas
+           Tenemos convenio con mas de 30 instituciones. Entre ellas:
         </Typography>
-        {/* <div className="flex flex-wrap items-center justify-center gap-6 mt-8">
+        <div className="flex flex-wrap items-center justify-center gap-11 mt-12">
           {CLIENTS.map((logo, key) => (
             <Image
               key={key}
-              alt={logo}
+              alt={logo.name}
               width={480}
               height={480}
-              src={`/logos/logo-${logo}.svg`}
-              className="w-40 grayscale opacity-75"
+              src={`/logos/${logo.name}.${logo.ext}`}
+              className="w-40"
             />
           ))}
-        </div> */}
+        </div>
       </div>
     </section>
   );

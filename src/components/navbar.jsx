@@ -2,23 +2,20 @@ import React from "react";
 import {
   Navbar as MTNavbar,
   Collapse,
-  Button,
   IconButton,
-  Typography,
+  Typography
 } from "@material-tailwind/react";
-import {
-  XMarkIcon,
-  Bars3Icon,
-} from "@heroicons/react/24/solid";
+import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
 const NAV_MENU = [
   {
     name: "Quienes somos",
-    href: "#quienes"
+    href: "#quienes",
   },
   {
     name: "Talleres",
-    href: "#grupos"
+    href: "#grupos",
   },
   {
     name: "Convenios",
@@ -27,7 +24,7 @@ const NAV_MENU = [
   {
     name: "Contactanos",
     href: "#contacto",
-  }
+  },
 ];
 
 function NavItem({ children, href }) {
@@ -57,15 +54,27 @@ export function Navbar() {
       () => window.innerWidth >= 960 && setOpen(false)
     );
   }, []);
-
   return (
-    <MTNavbar shadow={false} fullWidth className="border-0 sticky top-0 z-50 px-10">
+    <MTNavbar
+      shadow={false}
+      fullWidth
+      className="border-0 sticky top-0 z-50 px-10"
+    >
       <div className="container mx-auto flex items-center justify-between">
-        <Typography color="blue-gray" className="text-lg font-bold">
-          Creando Oportunidades
-        </Typography>
-        <ul className="ml-10 hidden items-center gap-8 lg:flex">
-          {NAV_MENU.map(({ name, href}) => (
+          <a href="#inicio" className="container flex items-center">
+            <Image
+              src={"/logo/logo-ac.png"}
+              width={50}
+              height={50}
+              alt="logo-ac"
+            />
+            <Typography color="blue-gray" className="text-lg font-bold">
+              Creando Oportunidades
+            </Typography>
+          </a>
+      
+        <ul className="ml-10 hidden items-center gap-8 lg:flex w-[600px]">
+          {NAV_MENU.map(({ name, href }) => (
             <NavItem key={name} href={href}>
               {name}
             </NavItem>
@@ -87,8 +96,8 @@ export function Navbar() {
       <Collapse open={open}>
         <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
           <ul className="flex flex-col gap-4">
-            {NAV_MENU.map(({ name }) => (
-              <NavItem key={name}>
+            {NAV_MENU.map(({ name, href }) => (
+              <NavItem key={name} href={href}>
                 {name}
               </NavItem>
             ))}
