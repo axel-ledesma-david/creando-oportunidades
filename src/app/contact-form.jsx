@@ -51,7 +51,7 @@ export function ContactForm() {
       id="contacto"
     >
       <div className="flex items-center justify-center flex-col gap-7 sm:justify-evenly sm:flex-row sm:gap-4 p-10 w-[full]">
-        <div className="isolate px-4 py-20 sm:py-32 lg:px-8 bg-blue-gray-200 w-[60%] rounded-md">
+        <div className="isolate px-4 py-20 sm:py-32 lg:px-8 bg-blue-gray-200 sm:w-[60%] rounded-md">
           <div
             aria-hidden="true"
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
