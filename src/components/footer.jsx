@@ -40,7 +40,7 @@ export function Footer() {
             &copy; {CURRENT_YEAR} Asociación Civil Con Personería Jurídica
             Creando Oportunidades
           </Typography>
-          <ul className="flex gap-8 items-center">
+          <ul className="flex gap-8 items-center md:flex-row flex-col">
             {links.map((link) => (
               <li key={link}>
                 <Typography
