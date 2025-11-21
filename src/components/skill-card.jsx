@@ -11,7 +11,7 @@ export function SkillCard({ icon, title, children }) {
         <Typography variant="h5" color="blue-gray" className="mb-2 mt-2">
           {title}
         </Typography>
-        <Typography className="px-8 font-normal !text-gray-700">
+        <Typography className="px-8 font-normal !text-gray-700" variant="lead">
           {children}
         </Typography>
       </CardBody>
