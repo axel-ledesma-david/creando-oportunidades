@@ -10,9 +10,9 @@ export function PopularClients() {
     {name: "centroSalud", ext: "png"},
     {name: "gymGoel-removebg-preview", ext: "png"},
     {name: "minIgualdad", ext: "jpeg"},
-    {name: "vecinalSanlo", ext: "jpeg"}
+    /* {name: "vecinalSanlo", ext: "jpeg"} */
   ]
-  /* #F3F4F6 #F1F5F9 */
+
 
   return (
     <section className="px-16 py-8 lg:py-15 bg-[#F3F4F6] shadow-md" id="convenios">
@@ -22,12 +22,12 @@ export function PopularClients() {
             Convenios
           </Typography>
         </div>
-        <Typography
+        {<Typography
           variant="lead"
           className="mx-auto w-full text-gray-600 text-xl text-center"
         >
-           Tenemos convenio con mas de 30 instituciones. Entre ellas:
-        </Typography>
+           Tenemos convenio con:
+        </Typography>}
         <div className="flex flex-wrap items-center justify-center gap-11 mt-12">
           {CLIENTS.map((logo, key) => (
             <Image
