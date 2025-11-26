@@ -27,7 +27,7 @@ const NAV_MENU = [
   },
 ];
 
-function NavItem({ children, href, handleOpen }) {
+function NavItem({ children, href, onOpen }) {
   return (
     <li>
       <Typography
@@ -36,7 +36,7 @@ function NavItem({ children, href, handleOpen }) {
         variant="small"
         color="gray"
         className="flex items-center gap-2 font-medium text-gray-900"
-        onClick={handleOpen}
+        onClick={onOpen}
       >
         {children}
       </Typography>
@@ -100,7 +100,7 @@ export function Navbar() {
         <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
           <ul className="flex flex-col gap-4">
             {NAV_MENU.map(({ name, href }) => (
-              <NavItem key={name} href={href} handleOpen={handleOpen}>
+              <NavItem key={name} href={href} onOpen={handleOpen}>
                 {name}
               </NavItem>
             ))}

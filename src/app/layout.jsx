@@ -10,11 +10,11 @@ const roboto = Roboto({
   display: "swap",
 });
 
-/* export const metadata: Metadata = {
+export const metadata = {
   title: "Creando Oportunidades",
   description:
-    "Introducing Tailwind Portfolio Page, a versatile and stylish portfolio template built on the foundation of Tailwind CSS and Material Tailwind.",
-}; */
+    "Asociación Civil dedicada a personas que luchan contra las adicciones",
+};
 
 export default function RootLayout({
   children,
@@ -27,7 +27,7 @@ export default function RootLayout({
           data-site="YOUR_DOMAIN_HERE"
           src="https://api.nepcha.com/js/nepcha-analytics.js"
         ></script>
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/logo/logo-ac.png" type="image/png" />
       </head>
       <body className={roboto.className}>
         <Layout>
