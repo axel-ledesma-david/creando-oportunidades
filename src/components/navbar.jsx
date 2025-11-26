@@ -27,7 +27,7 @@ const NAV_MENU = [
   },
 ];
 
-function NavItem({ children, href }) {
+function NavItem({ children, href, handleOpen }) {
   return (
     <li>
       <Typography
@@ -36,6 +36,7 @@ function NavItem({ children, href }) {
         variant="small"
         color="gray"
         className="flex items-center gap-2 font-medium text-gray-900"
+        onClick={handleOpen}
       >
         {children}
       </Typography>
@@ -54,6 +55,7 @@ export function Navbar() {
       () => window.innerWidth >= 960 && setOpen(false)
     );
   }, []);
+
   return (
     <MTNavbar
       shadow={false}
@@ -67,6 +69,7 @@ export function Navbar() {
               width={50}
               height={50}
               alt="logo-ac"
+              className="w-auto h-auto"
             />
             <Typography color="blue-gray" className="text-lg font-bold">
               Creando Oportunidades
@@ -97,7 +100,7 @@ export function Navbar() {
         <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
           <ul className="flex flex-col gap-4">
             {NAV_MENU.map(({ name, href }) => (
-              <NavItem key={name} href={href}>
+              <NavItem key={name} href={href} handleOpen={handleOpen}>
                 {name}
               </NavItem>
             ))}

@@ -15,7 +15,7 @@ export function PopularClients() {
 
 
   return (
-    <section className="px-16 py-8 lg:py-15 bg-[#F3F4F6] shadow-md" id="convenios">
+    <section className="px-16 py-8 lg:py-15 bg-[#F3F4F6] shadow z-0" id="convenios">
       <div className="container mx-auto grid items-center place-items-center">
         <div className="text-center">
           <Typography variant="h2" color="blue-gray" className="mb-4">

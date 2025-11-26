@@ -2,6 +2,7 @@
 
 /* import { ProjectCard } from "@/components"; */
 import { Typography } from "@material-tailwind/react";
+import Image from "next/image";
 
 const talleres = [
   {
@@ -33,7 +34,7 @@ const talleres = [
 
 export function Projects() {
   return (
-    <section className="py-28 px-8" id="grupos">
+    <section className="py-28 px-8 shadow-2xl z-10" id="grupos">
       <div className="container mx-auto mb-20 text-center">
         <Typography variant="h2" color="blue-gray" className="mb-4">
           Grupos, talleres y cursos
@@ -49,10 +50,12 @@ export function Projects() {
         >
           {/* Imagen */}
           <div className="md:w-1/2">
-            <img
+            <Image
               src={taller.img}
               alt={taller.title}
-              className="rounded-2xl h-80 object-cover shadow-lg w-full"
+              width={400}
+              height={200}
+              className="rounded-2xl object-cover h-80 shadow-lg w-full"
             />
           </div>
 
